@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Include html2canvas -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <!-- Include html2pdf.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 
     <!--========== BOX ICONS ==========-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
@@ -18,13 +13,14 @@
     <!-- Favicon -->
     <link rel="icon" href="./icon.ico" type="image/x-icon">
 
-    <title>College Connect - User Guide</title>
+    <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <title>College Connect - User Guide</title>
 </head>
 
 <body>
     <!--========== HEADER ==========-->
-
     <header class="header">
         <section class="header__container">
             <div class="logo">
@@ -33,7 +29,7 @@
             </sction>
     </header>
     <br />
-    <hr style="width:100%">
+    <hr />
 
     <!--========== NAV ==========-->
     <section class="nav" id="navbar">
@@ -51,38 +47,28 @@
 
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
-                                <i class="fa fa-user-graduate"></i>
-                                <span class="nav__name">Student</span>
+                                <i class="fa fa-portrait"></i>
+                                <span class="nav__name">Login</span>
                             </a>
                             <br>
                             <div class="nav__dropdown-content">
-                                <a href="index.html#top" class="nav__dropdown-item" onclick="rld()">My
-                                    Profile</a>
-                                <a href="index.html#my-goals_top" class="nav__dropdown-item" onclick="rld()">My
-                                    Goals</a>
-                                <a href="index.html#my-brag-book_top" class="nav__dropdown-item" onclick="rld()">My
-                                    Brag Book</a>
-                                <a href="index.html#my-messages_top" class="nav__dropdown-item" onclick="rld()">My
-                                    Messages</a>
-                                <a href="index.html#my-reflections_top" class="nav__dropdown-item" onclick="rld()">My
-                                        Reflections</a>
-                                <a href="index.html#my-checklist_top" class="nav__dropdown-item" onclick="rld()">College
-                                    Checklist</a>
-                                <a href="index.html#my-college_top" class="nav__dropdown-item" onclick="rld()">My
-                                    Colleges</a>
-                                <a href="index.html#stu-cal_top" class="nav__dropdown-item" onclick="rld()">My
-                                    Calendar</a>
+                                <a href="index.html#top" class="nav__dropdown-item" onclick="rld()">Login</a>
+                                <a href="index.html#stu-reg_top" class="nav__dropdown-item" onclick="rld()">Student
+                                    Registration</a>
+                                <a href="index.html#par-reg_top" class="nav__dropdown-item" onclick="rld()">Parent
+                                    Registration</a>
+                                <a href="index.html#forgot-pw_top" class="nav__dropdown-item"
+                                    onclick="rld()">Forgot Password</a>
                             </div>
                         </div>
 
                     </div>
                 </div>
             </div>
+            <!-- <button class="nav__button" id="downloadBtn">Download PDF</button> -->
         </nav>
     </section>
 
-
-    <!--========== CONTENTS ==========-->
     <main>
         <section class="home">
             <div class="user-guide">
@@ -90,1180 +76,606 @@
                     <h1>User Guide</h1>
                 </a>
             </div>
-
-            <!-- ================================================ My Profile ====================================== -->
+            <!-- =========================================== Login ===================================================-->
+            <!-- ------------------------------------- Login Section ------------------------------------- -->
             <section class="section-submenu">
-
-                <a id="my-profile">
-                    <h3>1. My Profile</h3>
-                </a>
-
+                <h3><a id="login"><b>1. Login Page</b></a></h3>
                 <ul class="level-1">
-                    <li>Student can update/merge progress in the My Profile Section.</li>
-                    <li>If a student is not merged with an SFTP account then there are 2 ways to update their profiles
-                    </li>
-                    <ul class="level-2">
-                        <li>Left-hand side's <b>Menu Bar</b></li>
-                        <li>Dashboard <b>"Update Profile" </b>button</li>
-                    </ul>
+                    <li>The College Connect application login screen serves as the gateway for students to access their
+                        accounts and engage with the platform's features.</li>
                 </ul>
-                <br />
-                <section class="image">
-                    <br />
-                    <div class="row">
-                        <div class="column">
-                            <img src="Student Role College Connect Siembra Mobile Screenshots/161.png">
-                            <p class="caption"><i>Screen 1.1: Student can find the profile in the <b>left-hand side
-                                        menu</b> and click on it.</i></p>
-                        </div>
-                        <br />
-                </section>
-                <br />
-                </div>
-                <ul class="level-1">
-                    <h3>
-                        <li>There are Four Parts of the My profile updating screen:</li>
-                    </h3>
-                    <ul class="level-2">
-                        <li>Personal Information.</li>
-                        <li>Student Contact Information.</li>
-                        <li>Parent/Guardian Information.</li>
-                        <li>Student Academic Verification.</li>
-                    </ul>
-                </ul>
-                <br />
-
-
                 <ol class="ol-level-2">
-
-                    <!-- ---------------------------------- Fields----------------------------- -->
-                    <li><b>Fields:</b></li>
-                    <ul class="level-2">
-                        <h3>
-                            <li>Personal Information Fields:</li>
-                        </h3>
-                        <ul class="level-3">
-                            <li><b>Checkbox: </b> I would be the first in my family to attend college.</li>
-                            <li><b>First Name: </b>Enter your first name.</li>
-                            <li><b>Last Name: </b>Enter your last name.</li>
-                            <li><b>Email address: </b>Enter your personal email ID.</li>
-                            <li><b>Language Preference Dropdown: </b>Select your preferred language [EN/ES].</li>
-                            <li><b>Choose File: </b>Choose a file to upload a profile image.</li>
-                            <li><b>Gender: </b>Select the gender.</li>
-                            <li><b>Birthday: </b>Select the birthday.</li>
-                            <li><b>Password: </b>Enter your password.</li>
-                            <li><b>Confirm Password: </b>Re-enter your password.</li>
-                            <li><b>Country Dropdown: </b>Select your country.</li>
-                            <li><b>State Dropdown/Input Field: </b>Enter/select your state.</li>
-                        </ul>
-                        <h3>
-                            <li>Student Contact Information Fields:</li>
-                        </h3>
-                        <ul class="level-3">
-                            <li><b>Mobile Number: </b>Enter your mobile number.</li>
-                            <li><b>Recovery Email Address: </b>Add a recovery email address.</li>
-                        </ul>
-                        <h3>
-                            <li>Parent/Gaurdian Contact Information:</li>
-                        </h3>
-                        <ul class="level-3">
-                            <li><b>Parent name: </b>Enter your parent's name.</li>
-                            <li><b>Parent email address: </b>Enter your parent's email address.</li>
-                            <li><b>Parent Mobile Phone Number: </b>Enter your parent's mobile phone number.</li>
-                        </ul>
-                        <h3>
-                            <li>Student Verification (2 methods):</li>
-                        </h3>
-                        <ul class="level-3">
-                            <li>With E-mail ID.</li>
-                            <li>Without E-mail ID.</li>
-                        </ul>
-                    </ul>
-                    <br />
-                    <hr />
-                    <br />
-                    <!-- -------------------------- verification with email id -------------------------------- -->
-                    <section class="section-sub-submenu">
-                        <a id="verification-with-email-id"></a>
-                        <h3>1.1. With E-mail ID/Without Email ID</h3></a>
-
-                        <ol class="ol-level-2">
-                            <br />
-                            <section class="image">
-                                <br />
-                                <!-- ------------------------ Screens --------------------------------------- -->
-                                <li><b>Screens</b></li>
-                                <br />
-                                <div class="row">
-                                    <div class="column">
-                                        <img src="Student Role College Connect Siembra Mobile Screenshots/175.png">
-                                        <p class="caption"><i>Screen 1.1.1: Fill the required details.</i></p>
-                                    </div>
-
-                                    <div class="column">
-                                        <img src="Student Role College Connect Siembra Mobile Screenshots/profile_bday.png">
-                                        <p class="caption"><i>Screen 1.1.2: Fill the required details.</i></p>
-                                    </div>
-                                    <div class="column">
-                                        <img src="Student Role College Connect Siembra Mobile Screenshots/4.png">
-                                        <p class="caption"><i>Screen 1.1.3: Fill the required details.</i></p>
-                                    </div>
-                                    
-                                </div>
-                                <div class="row">
-                                    <div class="column">
-                                        <img src="Student not SFTP/180.png">
-                                        <p class="caption"><i>Screen 1.1.4: In the verification type, Select <b>With
-                                                    E-mail Id</b> if you want to verify with E-mail Id.</i></p>
-                                    </div>
-                                    <div class="column">
-                                        <img src="Student not SFTP/179.png">
-                                        <p class="caption"><i>Screen 1.1.5: In the verification type, Select <b>Without
-                                                    E-mail Id</b> if you want to verify without E-mail Id.</i></p>
-                                    </div>
-                                    <div class="column">
-                                        <img src="Student not SFTP/178.png">
-                                        <p class="caption"><i>Screen 1.1.6: Enter the details required and enter the
-                                                <b>OTP</b> received in your student E-mail ID.</i></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-
-                                    <div class="column">
-                                        <img src="Student not SFTP/185.png">
-                                        <p class="caption"><i>Screen 1.1.7: OTP verification Successful.</i></p>
-                                    </div>
-                                    <div class="column">
-                                        <img src="Student not SFTP/186.png">
-                                        <p class="caption"><i>Screen 1.1.8: Profile Update Successful.</i></p>
-                                    </div>
-                                </div>
-                                <br />
-                            </section>
-                            <br />
-
-                            <!-- -------------------- Fields ----------------------------- -->
-                            <li><b>Fields:</b></li>
-                            <ul class="level-2">
-                                <li><b> For With Email ID:</b></li>
-                                <ul class="level-3">
-                                    <li><b>School Email Address: </b>Enter your school Email address.</li>
-                                </ul>
-                                <li><b>For Without Email ID: </b></li>
-                                <ul class="level-3">
-                                    <li><b>School Name: </b>Enter your school's name.</li>
-                                    <li><b>Student ID: </b>Enter your Student ID.</li>
-                                </ul>
-                            </ul>
-                            <br />
-                            <!-- -------------- Procedure -------------------------------- -->
-                            <li><b>Procedure:</b></li>
-                            <ul class="level-2">
-                                <li>Fill up the required details in the Personal Information, Student Contact
-                                    Information and Parent/Guardian Information sections.</li>
-                                <li>To view the <b>Student Academic Information</b>, you will first have to verify your
-                                    account if<b> registered with personal/google e-mail ID</b>.</li>
-                                <li>Select the <b>With Email ID</b> in the <b>Student Academic Information</b> for the
-                                    <b>Verification Type</b> field.
-                                </li>
-                                <li>Enter your <b>School E-mail ID</b> in the school E-mail Address field and Click on
-                                    <b>Verify Email</b>.
-                                </li>
-                                <li>If you have Selected <b>Without Email ID</b> then you will need to enter your
-                                    <b>School Name </b>and your<b> Student ID</b>. After entering the required fields,
-                                    you will be prompted with your school Email ID.
-                                </li>
-                                <li>You will receive an <b>OTP</b> in your <b>School Email ID</b>. Enter the OTP to
-                                    verify your account and access the academic information.</li>
-                                <li>A pop-up message:<b> "Profile Updated Successfully. To continue, please re-login
-                                        using email below: "</b>. Click on <b>"OK"</b>.</li>
-                                <li>You will be <b>logged out</b> and <b>redirected to the Sign In page</b>.</li>
-                                <li>Sign In again using the <b>E-mail ID prompted in the pop-up message</b>.</li>
-                                <li>Your goals and status would have been updated on the dashboard.</li>
-                            </ul>
-                            <br />
-                            <!-- ------------- Notes --------------------- -->
-                            <li><b>Notes:</b></li>
-                            <ul class="level-2">
-                                <li>Make sure you fill all the required details correctly.</li>
-                                <li>The profile will be saved only when all mandatory fields are filled.</li>
-                                <li>The <b>Verify Email</b> button will be enabled only after the school's name and
-                                    student ID is entered.</li>
-                                <li>Click on <b>"Resend OTP"</b> if required.</li>
-                                <li>Your Goal details would be visible only after the verification.</li>
-                                <li>You can go back to the user inquiry page at any time by clicking the<b> “&lt;” </b>
-                                    icon.</li>
-                            </ul>
-                        </ol>
-                        <br />
-                    </section>
-                    <br />
-                    <a href="#top">Back To My Profile</a>
-                    <hr />
-                    <br />
-                    <!-- ------------------ Delete Profile ---------------------------------- -->
-                    <section class="delete-profile">
-                        <a id="delete-profile">
-                            <h3>1.2 Delete Account </h3>
-                        </a>
-                        <br />
-                        <ol class="ol-level-2">
-                            <section class="image">
-                                <br />
-                                <li><b>Screens</b></li>
-                                <div class="row">
-                                    <div class="column">
-                                        <img src="Student Role College Connect Siembra Mobile Screenshots/177.png">
-                                        <p class="caption"><i>Screen 1.2.1: <b>Delete Account</b> option is available at
-                                                the very bottom of <b>My profile </b>page.</i></p>
-                                    </div>
-                                </div>
-                                <br />
-                            </section>
-                            <br>
-                            <li><b>Procedure:</b></li>
-                            <ul class="level-2">
-                                <li>To delete your account, go to the <b>bottom</b> of <b>My Profile</b>.</li>
-                                <li>Click on the <b>"Delete account"</b> button.</li>
-                                <li>A pop-up message: <b>"Are you sure you want to delete your account from College
-                                        Connect App"</b>, for account deletion will appear.</li>
-                                <li>Click <b>"OK"</b> to delete the account.</li>
-                                <li>Another pop-up message: <b>"Warning: When You delete your College Connect account,
-                                        you won't be able to retrieve your information you have stored on the
-                                        application. You will not receive any messages from Colleges/Universities for
-                                        future enrollment and courses. You will also lose all your messages with your
-                                        counselor and colleges"</b>, will appear.</li>
-                                <li>Click <b>"OK"</b> if you are sure to delete your account.</li>
-                            </ul>
-                        </ol>
-                        <br />
-
-                    </section>
-                    <br />
-                    <a href="#top" id="my-goals_top">Back To My Profile</a>
-                    <hr>
-                    <br />
-            </section>
-
-            <!-- =============================================== My Goals ========================================== -->
-            <section class="section-submenu">
-                <a id="my-goals">
-                    <h3>2. My Goals</h3>
-                </a>
-
-                <ul class="level-1">
-                    <li>The Goal Dashboard screen serves as a central hub for students to track their progress toward
-                        fulfilling various academic requirements.</li>
-                    <br />
-                </ul>
-                <!-- =========================== Not Verified goals ================================== -->
-                <section class="section-sub-submenu">
-                    <a id="not-verified-goals">
-                        <h3>Profile Not Verified</h3>
-                    </a>
-                    <br />
-
-                    <ol class="ol-level-2">
-                        <section class="image">
-                            <br />
-                            <!-- ======================= Screens ===========================-->
-                            <li><b>Screens</b></li>
-                            <div class="row">
-                                <div class="column">
-                                    <img src="Student not SFTP/7.png">
-                                    <p class="caption"><i>Screen 2.1: My Goals Dashboard for <b>Not Verified</b>
-                                            Profiles.</i></p>
-                                </div>
-                            </div>
-                            <br>
-                        </section>
-                        <br />
-                        <!-- ============================= Note ================================ -->
-                        <li><b>Notes:</b></li>
-                        <ul class="level-2">
-                            <li>If The student profile is not yet verified, then the dashboard will show the message
-                                <b>"Please Find Your Status"</b>, with an <b>Update Profile Details Button</b> below it.
-                            </li>
-                            <li>Click the <b>Update Profile Details</b> and update and verify your profile
-                                information(refer to <b>My Profile</b> section) </li>
-                        </ul>
-                    </ol>
-                </section>
-                <br />
-                <a href="#my-goals_top">Back To My Goals</a>
-                <hr>
-                <br />
-                <!-- -------------------------------- Verified Goals ----------------------------------------------- -->
-                <section class="section-sub-submenu">
-                    <a id="my-goals-verified">
-                        <h3>2.1 Verified Profile Goals</h3>
-                    </a>
-
-                    <ul class="level-1">
-                        <li>For a <b>Verified Account</b>, you can view your goals from the <b>Left-Hand Side Menu</b>.
-                        </li>
-                        <li>The <b>My Goals</b> section in left-hand side menu consist of <b>3 sections: </b></li>
-                        <ul class="level-2">
-                            <li><b>CC Requirement</b></li>
-                            <li><b>CSU Requirement</b></li>
-                            <li><b>UC Requirement</b></li>
-                        </ul>
-
-                        <br />
-                        <section class="image">
-                            <br />
-                            <div class="row">
-                                <div class="column">
-                                    <img src="Student Role College Connect Siembra Mobile Screenshots/162.png">
-                                    <p class="caption"><i>Screen 2.1.1: My Goals for Verified Account</i></p>
-                                </div>
-                            </div>
-                        </section>
-                    </ul>
-                    <br />
-                    <br />
-                    <ol class="ol-level-2">
-                        <section class="image">
-                            <br />
-                            <!-- ---------------- Screens -------------------------- -->
-                            <li><b>Screens</b></li>
-                            <br />
-                            <ul class="level-2">
-                                <li><b>CC Goals</b></li>
-                                <div class="row">
-                                    <div class="column">
-                                        <img src="Student Role College Connect Siembra Mobile Screenshots/160.png">
-                                        <p class="caption"><i>Screen 2.1.2: CC Goals</i></p>
-                                    </div>
-                                    <div class="column">
-                                        <img src="Student Role College Connect Siembra Mobile Screenshots/155.png">
-                                        <p class="caption"><i>Screen 2.1.3: CSU Goals</i></p>
-                                    </div>
-                                    <div class="column">
-                                        <img src="Student Role College Connect Siembra Mobile Screenshots/154.png">
-                                        <p class="caption"><i>Screen 2.1.4: UC Goals</i></p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="column">
-                                        <img src="Student Role College Connect Siembra Mobile Screenshots/157.png">
-                                        <p class="caption"><i>Screen 2.1.5: Click on Send Message to send a message to a
-                                                counselor.</i></p>
-                                    </div>
-                                    <div class="column">
-                                        <img src="Student Role College Connect Siembra Mobile Screenshots/152.png">
-                                        <p class="caption"><i>Screen 2.1.6: Click on Change Goal to request your
-                                                counselor to change your goal.</i></p>
-                                    </div>
-                                </div>
-                                <br />
-                        </section>
-                        <br />
-                        <!-- ----------------------- fields ------------------------------------ -->
-                        <li><b>Fields:</b></li>
-                        <ul class="level-2">
-                            <li><b>Progress Meter with Status Indicator: </b>provides a graphic visualization of their
-                                progress. </li>
-                            <li><b>View Details: </b>View details of each individual goal.</li>
-                            <li><b>Send Message: </b>Send a message directly to the counselor regarding a goal.</li>
-                            <li><b>Change Goal: Request a counselor to change the goal.</b></li>
-                        </ul>
-                        <br />
-                        <!-- --------------------------- Procedure -------------------------------- -->
-
-                        <li><b>Procedure:</b></li>
-
-                        <ul class="level-2">
-                            <li>In the <b>My Goals</b> section in the left-hand-side menu, Select the <b>CC
-                                    Requirements</b> to view CC goals.</li>
-                            <li>You will be redirected to the CC requirements dashboard.</li>
-                            <li>Here, you can view your CC progress, as well as look at the details of each goal with
-                                the help of the <b>View Details</b> button.</li>
-                            <li>With the help of the<b> Send Message </b>button, you can directly contact a counselor
-                                regarding any goal related queries.</li>
-                            <ul class="level-3">
-                                <li>On clicking this button, A "New Message" pop-up window is opened.</li>
-                                <li>The pop-up window includes a dropdown menu to select a counselor.</li>
-                                <li>In the input field, type the message.</li>
-                                <li>Click on the Send Message button.</li>
-                                <li>The <b>Send message</b> button is enabled only if <b>a counselor is selected and a
-                                        message is typed in the input field</b>.</li>
-                            </ul>
-                            <li>With the help of the <b>Change Goal</b> button, you can request a counselor to change a
-                                goal.</li>
-                            <ul class="level-3">
-                                <li>Specifically designed to send a Goal change request to a counselor.</li>
-                                <li>On clicking this button, A "New Message" pop-up window is opened.</li>
-                                <li>The pop-up window includes a dropdown menu to select a counselor.</li>
-                                <li>In the input field, type the change request message.</li>
-                                <li>Click on the Send Message button.</li>
-                                <li>The <b>Change Request</b> button is enabled only if <b>a counselor is selected and
-                                        a message is typed in the input field</b>.</li>
-                            </ul>
-                        </ul>
-                        <br />
-
-                        <!-- ----------------------------- Notes ---------------------------- -->
-                        <li><b>Notes:</b></li>
-                        <ul class="level-2">
-                            <li>If the Student clicks on the <b>"View Details"</b> button for a specific goal, the
-                                <b>"Send Message"</b> button dynamically changes its name to <b>"Contact counselor"</b>.
-                            </li>
-                        </ul>
-                    </ol>
-
-                </section>
-
-                <br />
-                <a href="#my-goals_top" id="my-brag-book_top">Back To My Goals</a>
-                <hr>
-                <br />
-            </section>
-
-
-            <!-- ====================================== My Brag Book ======================================== -->
-            <section class="section-submenu">
-                <a id="my-brag-book">
-                    <h3>3. My Brag Book </h3>
-                </a>
-
-                <ul class="level-1">
-                    <li>The My Brag Book dropdown section consists of <b>four sections: My Passion, My Activities, My
-                            Academics, and My Athletics. </b>Each section provides a platform for students to list and
-                        highlight their accomplishments in specific areas of interest. Clicking on any of the sections
-                        will open a list of checkboxes with their respective names. When the user clicks on "My
-                        Passion", only that section will open individually. The other three sections will be displayed
-                        on one screen.</li>
-
-                    <br />
+                    <!-- ========================== Screen ==================================== -->
                     <section class="image">
                         <br />
-                        <img src="Student Role College Connect Siembra Mobile Screenshots/158.png">
-                        <p class="caption"><i>Screen 3.1: My Brag Book</i></p>
-                        <br />
-                    </section>
-                </ul>
-                <br />
-                <ul class="level-1">
-                    <li><b>Language Toggle Button:</b></li>
-
-                    <ul class="level-2">
-                        <li>Within the sections My Passion, My Activities, My Academics, and My Athletics, there is a
-                            language toggle button with options [EN/ES].</li>
-                        <li>This button allows the student to switch between English and Spanish languages for the
-                            content within these sections.</li>
-                    </ul>
-
-                    <br />
-
-                </ul>
-
-                <br />
-                <a href="#my-brag-book_top">Back To My Brag Book</a>
-                <hr>
-                <br />
-
-                <!-- ---------------- My Passion ----------------------------- -->
-                <section class="section-sub-submenu">
-                    <a id="my-passion">
-                        <h3>3.1 My Passion</h3>
-                    </a>
-                    <br />
-
-                    <ol class="ol-level-2">
-                        <!-- ------------------------- Screens -------------------------- -->
-                        <li><b>Screens</b></li>
-                        <br />
-                        <section class="image">
-                            <div class="row">
-                                <div class="column">
-                                    <img src="Student Role College Connect Siembra Mobile Screenshots/166.png">
-                                    <p class="caption"><i>Screen 3.1.1: My Passion Page.</i></p>
-                                </div>
-                            </div>
-                            <br />
-                        </section>
-                        <br>
-                        <!-- ---------------- fields ------------------------------------ -->
-                        <li><b>Fields:</b></li>
-                        <ul class="level-2">
-                            <li><b>Field Checkboxes:</b> Various Fields to select.</li>
-                            <li><b>Save Button:</b> Saves updates or changes made to the data.</li>
-                            <li><b>Delete Button:</b> Discards updates or changes made in the data.</li>
-                        </ul>
-                        <br />
-                        <!-- -------------- procedure ------------------------------------ -->
-                        <li><b>Procedure:</b></li>
-                        <ul class="level-2">
-                            <li>When a student opens the My Passion section, they will find various fields listed out
-                                and two buttons: "Save" and "Cancel".</li>
-                            <li>Select the desired fields.</li>
-                            <li>Click on <b>"Save"</b> button to save any changes or updates made to the data within the
-                                My Passion section.</li>
-                            <li>Clicking on the<b> "Cancel"</b> button allows the student to discard any changes or
-                                updates made to the data within the My Passion section.</li>
-                            <li>Click <b>OK</b> on the update message pop-up.</li>
-                        </ul>
-                        <br />
-                    </ol>
-                </section>
-                <br />
-                <a href="#my-brag-book_top">Back To My Brag Book</a>
-                <hr />
-                <br />
-
-                <!-- ------------------------- My Activities ---------------------- -->
-                <section class="section-sub-submenu">
-                    <a id="my-activities">
-                        <h3>3.2 My Activities</h3>
-                    </a>
-                    <br />
-
-                    <ol class="ol-level-2">
-                        <!-- ----------------------------- screens ----------------------------------------->
-                        <section class="image">
-                            <br />
-                            <li><b>Screens</b></li>
-                            <div class="row">
-                                <div class="column">
-                                    <img src="Student Role College Connect Siembra Mobile Screenshots/165.png">
-                                    <p class="caption"><i>Screen 3.2.1: My Activities Page.</i></p>
-                                </div>
-                            </div>
-                            <br />
-                        </section>
-                        <br />
-                        <!-- -------------------------- fields ----------------------------------- -->
-                        <li><b>Fields</b></li>
-
-                        <ul class="level-2">
-                            <li><b>Field Checkboxes: </b>Various Fields to select.</li>
-                            <li><b>Save Button:</b> Saves updates or changes made to the data.</li>
-                            <li><b>Delete Button:</b> Discards updates or changes made in the data.</li>
-                        </ul>
-                        <br />
-
-                        <!-- -------------------------- procedure ------------------------------------ -->
-                        <li><b>Procedure</b></li>
-                        <ul class="level-2">
-                            <li>When a student opens the My Activities section, they will find various fields listed out
-                                and two buttons: "Save" and "Cancel".</li>
-                            <li>Select the desired fields.</li>
-                            <li>Click on <b>"Save"</b> button to save any changes or updates made to the data within the
-                                My Activity section.</li>
-                            <li>Clicking on the<b> "Cancel"</b> button allows the student to discard any changes or
-                                updates made to the data within the My Activity section.</li>
-                            <li>Click <b>"OK"</b> on the update message pop-up </li>
-                        </ul>
-                        <br />
-                    </ol>
-                </section>
-                <br />
-                <a href="#my-brag-book_top">Back To My Brag Book</a>
-                <hr />
-                <br />
-
-                <!-- ------------------------------- My Academics ------------------------------------------------------- -->
-                <section class="section-sub-submenu">
-                    <a id="my-academics">
-                        <h3>3.3 My Academics</h3>
-                    </a>
-                    <br />
-                    <ol class="ol-level-2">
-                        <!-- ------------ screens ------------------------ -->
-                        <section class="image">
-                            <br />
-                            <li><b>Screens</b></li>
-                            <div class="row">
-                                <div class="column">
-                                    <img src="Student Role College Connect Siembra Mobile Screenshots/163.png">
-                                    <p class="caption"><i>Screen 3.3.1: My Academics Page.</i></p>
-                                </div>
-                            </div>
-                            <br />
-                        </section>
-                        <br />
-
-
-                        <!-- -------------------- fields --------------------------- -->
-                        <li><b>Fields:</b></li>
-                        <ul class="level-2">
-                            <li><b>Field Checkboxes: </b> Various Fields to select.</li>
-                            <li><b>Save Button:</b> Saves updates or changes made to the data. </li>
-                            <li><b>Delete Button:</b> Discards updates or changes made in the data.</li>
-                        </ul>
-                        <br />
-
-
-                        <!-- ---------------- procedure ---------------- -->
-                        <li><b>Procedure:</b></li>
-                        <ul class="level-2">
-                            <li>When a student opens the My Academics section, they will find various fields listed out
-                                and two buttons: "Save" and "Cancel".</li>
-                            <li>Select the desired fields.</li>
-                            <li>Click on <b>"Save"</b> button to save any changes or updates made to the data within the
-                                My Academics section.</li>
-                            <li>Clicking on the<b> "Cancel"</b> button allows the student to discard any changes or
-                                updates made to the data within the My Academics section.</li>
-                            <li>Click <b>OK</b> on the update message pop-up.</li>
-                        </ul>
-                        <br />
-
-                    </ol>
-                </section>
-                <br />
-                <a href="#my-brag-book_top">Back To My Brag Book</a>
-                <hr>
-                <br />
-                <!-- ------------------------------------- My Athletics ------------------------------------------- -->
-                <section class="section-sub-submenu">
-                    <a id="my-athletics">
-                        <h3>3.4 My Athletics</h3>
-                    </a>
-                    <br />
-                    <ol class="ol-level-2">
-                        <!--  ------------- Screens ------------------------ -->
-                        <section class="image">
-                            <br />
-                            <li><b>Screens</b></li>
-                            <div class="row">
-                                <div class="column">
-                                    <img src="Student Role College Connect Siembra Mobile Screenshots/164.png">
-                                    <p class="caption"><i>Screen 3.4.1: My Athletics Page</i></p>
-                                </div>
-                            </div>
-                            <br />
-                        </section>
-                        <br />
-                        <!-- -------------- fields ----------------------- -->
-                        <li><b>Fields</b></li>
-                        <ul class="level-2">
-                            <li><b>Field Checkboxes: </b>Various Fields to select.</li>
-                            <li><b>Save Button:</b> Saves updates or changes made to the data.</li>
-                            <li><b>Delete Button:</b> Discards updates or changes made in the data.</li>
-                        </ul>
-                        <br />
-                        <!-- ---------------- procedure ------------------ -->
-                        <li><b>Procedure</b></li>
-                        <ul class="level-2">
-                            <li>When a student opens the My Athletics section, they will find various fields listed out
-                                and two buttons: "Save" and "Cancel".</li>
-                            <li>Select the desired fields.</li>
-                            <li>Click on <b>"Save"</b> button to save any changes or updates made to the data within the
-                                My Athletics section.</li>
-                            <li>Clicking on the<b> "Cancel"</b> button allows the student to discard any changes or
-                                updates made to the data within the My Athletics section</li>
-                            <li>Click <b>OK</b> on the update message pop-up </li>
-                        </ul>
-                        <br />
-                    </ol>
-                </section>
-                <br />
-                <a href="#my-brag-book_top">Back To My Brag Book</a>
-                <hr>
-                <br />
-            </section>
-
-            <!-- ------------------------------------- My Curriculum ------------------------------------------- -->
-            <section class="section-submenu">
-                <a id="my-curriculum">
-                    <h3>3.5 My Curriculum</h3>
-                </a>
-                <ul class="level-1">
-                    <li>The My Curriculum tab is only for people who <b>dont have a student ID</b>.</li>
-                    <li>This tab allows you to enter information about your <b>current school and your performance
-                            report</b>.
-                    </li>
-                    <br>
-                    <ol class="ol-level-2">
-                        <section class="image">
-                            <br>
-                            <b><li>1. Screens Undergraduate</li></b>
-                            <br>
-                            <div class="row">
-                                <div class="column">
-                                    <img src="Student Role College Connect Siembra Mobile Screenshots/158.png">
-                                    <p class="caption"><i>3.5.1: Students can find the my curriculum tab in the side
-                                            panel</i></p>
-                                </div>
-                                <div class="column">
-                                    <img src="Student not SFTP/My_Curriculum_Undergraduate.png">
-                                    <p class="caption"><i>Screen 3.5.2: Student select the undergraduate and other options.</i></p>
-                                </div>
-                                <div class="column">
-                                    <img src="Student not SFTP/My_Curriculum_Undergraduate_ES.png">
-                                    <p class="caption"><i>Screen 3.5.3: Student select the language as Spanish.</i>
-                                    </p>
-                                </div>
-                                <div class="column">
-                                    <img src="Student not SFTP/My_curriculu_Upload_Undergraduate_1.png">
-                                    <p class="caption"><i>Screen 3.5.4: Second window of undergraduate and student enter the IELTS,TOEFL,DET Score.</i>
-                                </div>
-                                                               
-                                <div class="column">
-                                    <img src="Student not SFTP/My_Curriculum_Upload_ES.png">
-                                    <p class="caption"><i>Screen 3.5.5: Second window of undergraduate in Spanish
-                                        [es].</i>
-                                    </p>
-                                </div>
-
-                                <div class="column">
-                                    <img src="Student not SFTP/My_Curriculum_Upload_Undergraduate_2.png">
-                                    <p class="caption"><i>Screen 3.5.6: Second window of undergraduate and student can upload desire documents.</i>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                    </ol>
-
-                    
-                    <br>
-                    <ol class="ol-level-2">
-                        <section class="image">
-                            <br>
-                            <b><li>2. Screens Graduate</li></b>
-                            <br>
-                            <div class="row">
-                                <div class="column">
-                                    <img src="Student not SFTP/My_Curriculum_Graduate_1.png">
-                                    <p class="caption"><i>3.5.7: Student select the graduate and other options.</i></p>
-                                </div>
-                                <div class="column">
-                                    <img src="Student not SFTP/My_Curriculum_Graduate_2.png">
-                                    <p class="caption"><i>Screen 3.5.8: Student select the graduate and other options.</i></p>
-                                </div>
-                                <div class="column">
-                                    <img src="Student not SFTP/My_Curriculum_Graduate_Upload_1.png">
-                                    <p class="caption"><i>Screen 3.5.9: Second window of graduate and student enter the IELTS,TOEFL,GRE Score.</i>
-                                    </p>
-                                </div>
-
-                                <div class="column">
-                                    <img src="Student not SFTP/My_Curriculum_Graduate_Upload_ES.png">
-                                    <p class="caption"><i>Screen 3.5.10: Second window of graduate and student can select the language as Spanish.</i>
-                                    </p>
-                                </div>
-
-                                <div class="column">
-                                    <img src="Student not SFTP/My_Curriculum_Graduate_Upload_2.png">
-                                    <p class="caption"><i>Screen 3.5.11: Second window of graduate and student enter the DET score and othe options.</i>
-                                </div>
-
-                                <div class="column">
-                                    <img src="Student not SFTP/My_Curriculum_Graduate_Upload_3.png">
-                                    <p class="caption"><i>Screen 3.5.12: Second window of graduate and student can upload desire documents.</i>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                    </ol>   
-
-
-
-                    <ul class="level-2">
-                        <h4>Procedure</h4>
-                        <li>Fill in all the information about your <b>current education (Undergraduate / Graduate) </b> and click on <b>Save and
-                                Next</b>.</li>
-                        <li>Fill in your <b>test scores (Undergraduate / Graduate)</b> on the next tab.</li>
-                        <li>Click on the <b>upload button</b> next to the text box to upload your <b>score reports</b>.
-                        </li>
-                        <li>Once uploaded, you can click on the <b>eye icon</b> to view the file or click on the
-                            <b>cross</b> to
-                            delete the file.
-                        </li>
-                    </ul>
-                </ul>
-                <br />
-                <a href="#my-brag-book_top" id="my-messages_top">Back To My Brag Book</a>
-                <hr>
-                <br />
-            </section>
-
-
-            <!-- ======================================= My Messages ============================================== -->
-            <section class="section-submenu">
-
-                <a id="my-messages">
-                    <h3>4. My Messages</h3>
-                </a>
-
-                <ul class="level-1">
-                    <li>My messages feature enables the student to connect to their counselors, recruiters and School
-                        IT personnel.</li>
-
-                    <li><b>There are 2 ways to access the messages:</b>
-                        <ul class="level-2">
-                            <li>From the <b>Message Icon</b> in the top right corner of the <b>Dashboard Screen</b>.
-                            </li>
-                            <li>From the <b>Left-Hand Side Menu bar, My Messages</b>.</li>
-                        </ul>
-                    </li>
-
-                    <br />
-                </ul>
-
-                <ol class="ol-level-2">
-
-                    <!-- ----------------- Screens ---------------------------- -->
-                    <section class="image">
-                        <br />
-                        <li><b>Screens</b></li>
-
+                        <li><b>Screen</b></li>
                         <div class="row">
                             <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/161.png">
-                                <p class="caption"><i>Screen 4.1: Accessing messages from the left-hand side menu from
-                                        the <b>My Messages</b>.</i></p>
+                                <img src="Outer/[Mockup] iPhone Xs.png"
+                                    class="web-img">
+                                <br />
+                                <p class="caption"><i>Screen 1.1: Flash Screen on opening the app.</i></p>
+                                <br />
                             </div>
                             <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/168.png">
-                                <p class="caption"><i>Screen 4.2: My Message screen, the message screen will open,
-                                        displaying a list of names and preview messages from counselors, recruiters and
-                                        School IT personnel.</i></p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/171.png">
-                                <p class="caption"><i>Screen 4.3: If user selects the <b>English [EN] Launguage</b>,
-                                        then the messages are displayed in English.</i></p>
-                            </div>
-                            <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/167.png">
-                                <p class="caption"><i>Screen 4.4: If user selects the <b>Spanish [ES] Launguage</b>,
-                                        then the messages are displayed in Spanish.</i></p>
+                                <img src="Outer/[Mockup] iPhone Xs-6.png"
+                                    class="web-img">
+                                <p class="caption"><i>Screen 1.2: Login Page.</i></p>
                             </div>
                         </div>
                         <br />
                     </section>
                     <br />
-
-
-                    <!-- ----------------- notes ---------------------------------- -->
-                    <li><b>Notes:</b></li>
-
-                    <ul class="level-2">
-                        <li>Newly registered students cannot send messages to counselors, recruiters, or school IT
-                            personnel until they receive an initial message from them.</li>
-                        <li>Upon selecting My Messages/Message Icon, the message screen will open, displaying a list of
-                            names and preview messages from counselors, recruiters and school IT personnel.</li>
-                        <li>The message language is displayed based on the<b> language selected in the profile section
-                                [EN/ES]</b>.</li>
-                        <li>The language can be changed from<b> My Profile</b> section.</li>
-                        <li>A <b>search bar</b> is provided within the Message screen for easy <b>searching based on
-                                sender names.</b></li>
-                        <li>When a new message is received, it appears at the top of the message list, with a message
-                            count displayed to the sender.</li>
-                        <li>The Dashboard Message icon also displays the message count if a new message is received,
-                            providing a visual indicator of unread messages.</li>
-                        <li>If a new message arrives while the application is open, a<b> popup message</b> will be
-                            displayed to notify the user instantly.</li>
-                        <li>If a new message arrives while the application is open, a <b>popup message </b>will be
-                            displayed to notify the user instantly.</li>
-                        <li>You can go back to the user inquiry page at any time by clicking the<b> “&lt;” </b>icon.
-                        </li>
-                    </ul>
-
-                </ol>
-                <br />
-                <a href="#my-messages_top" id="my-reflections_top">Back To My Messages</a>
-                <hr>
-                <br />
-            </section>
-
-
-             <!-- ======================================= My Reflections ============================================== -->
-             <section class="section-submenu">
-
-                <a id="my-reflections">
-                    <h3>5. My Reflections</h3>
-                </a>
-
-                <ul class="level-1">
-                    <li>My reflections feature enables the student to fill the basic/UC/CSU class remediation.</li>
-
-                   
-                </ul>
-
-                <ol class="ol-level-2">
-                    <section class="image">
-                        <br>
-                        <li><b>Screens</b></li>
-                        <br>
-                        <div class="row">
-                            <div class="column">
-                                <img src="student/1.png">
-                                <p class="caption"><i>5.1: Students can find the my reflections tab in the side
-                                        panel</i></p>
-                            </div>
-                            <div class="column">
-                                <img src="student/2.png">
-                                <p class="caption"><i>Screen 5.2: My Reflections screen, displaying the Basic Graduation Requirements..</i></p>
-                            </div>
-                        </div>    
-                        <div class="row">
-                            <div class="column">
-                                <img src="student/3.png">
-                                <p class="caption"><i>Screen 5.3: My Reflections screen, displaying the UC/CSU Eligibility.b.</i></p>
-                            </div>
-                            <div class="column">
-                                <img src="student/4.png">
-                                <p class="caption"><i>Screen 5.4: My Reflections screen, displaying the Questionnaire.</i>                     </p>
-                            </div>
-                        </div>   
-                        <!-- <div class="row">
-                            <div class="column">
-                                <img src="student/5.png">
-                                <p class="caption"><i>Screen 5.5: My Reflections screen, view the download reflections PDF.</i>
-                                </p>
-                            </div>
-                        </div> -->
-                    </section>
-                </ol>
-                <ol class="ol-level-2">
-
-                    <!-- -------------- fields ----------------------- -->
+                    <!-- ====================== Fields ======================================-->
                     <li><b>Fields</b></li>
-
                     <ul class="level-2">
-                        <li>  <b>Basic Graduation/UC/CSU Requirements: </b> </li>
-                        <li><b>First class that needs remediation: </b> <br /> Students can enter the class name. After typing the third character, suggestions will appear, and the student can click on the specific class that requires remediation.</li>
-                        <li><b>How do you plan to fix this: </b> <br />Students will select a single option from the dropdown menu. The purpose of this selection is to indicate how the student will be able to complete the class. </li>
-                        <li><b>When do you complete this: </b><br /> Students will select a single option from the dropdown menu. The purpose of this selection is to indicate when the student expects to complete the class.  </li>
-                        <li><b> Additional Classes:</b> <br />In the same way student can fill the second class,third class sections. </li>
-
-                        <li><b>Your current post-high school plans: </b><br />  Student enter the post high school plan.</li>
-                        <li><b>How are you doing in your classes: </b><br />Student expain the progress of the classes.</li>
-                        <li><b>What can we do to help you: </b><br />Student can enter the any help required related to class.</li>
-                        <li><b>What can we do to help your success:</b><br />Students can enter suggestions for better ways to achieve success.</li>
-                        <li><b>Are you having any difficulties in your classes: </b><br />Students can describe any difficulties they are experiencing in their classes.</li>
-                        <li><b>How can your advisior better help you in your current challenges: </b><br />Students can explain how their advisor can assist them more effectively with their current challenges.</li>
-                        <li><b>What are your immediate top three goals for this semester: </b><br />Students can enter their top three goals for the current semester. </li>
-                        
-                        <li><b>Save Button:</b><br /> Saves updates or changes made to the data.</li>
-                        <li><b>Cancel Button:</b><br /> Discards updates or changes made in the data.</li>
-                    </ul>
-                    <br />
-                    <!-- ---------------- procedure ------------------ -->
-                    <li><b>Procedure</b></li>
-                    <ul class="level-2">
-                        <li><b>Section I:  Basic Requirements</b><br />
-                            Fill in the basic requirements.<br />
-                            Begin with the first class that needs remediation.<br />
-                            Provide details on how and when you plan to complete this class.<br />
-                            Fill in the details for the second and third classes that need remediation.</li>
-
-                        <li><b>Section II: UC/CSU Requirements</b><br />
-                            Fill in the UC/CSU remediation details for the first class that needs remediation.<br />
-                            Provide the UC/CSU remediation details for the second class that needs remediation.<br />
-                            Enter the UC/CSU remediation details for the third class that needs remediation.<br />
-                        </li>
-
-                        <li><b>Section III: Questionnaire</b><br />
-                            If needed, complete the questionnaire in this section.</li>
-                        
-                        <li><b>Saving and Canceling Changes:</b><br />
-                        Click on <b>"Save"</b> button to save any changes or updates made to the data within the
-                            My Reflections section.<br />
-                        Clicking on the<b> "Cancel"</b> button allows the student to discard any changes or
-                            updates made to the data within the My Reflections section
-                    </ul>
-                    <br />
-                </ol>
-                <br />
-                <a href="#my-reflections_top" id="my-checklist_top">Back To My Reflections</a>
-                <hr>
-                <br />
-            </section>
-
-
-            <!-- ======================================== College Checklist ======================================== -->
-            <section class="section-submenu">
-                <a id="my-checklist">
-                    <h3>6. College Checklist </h3>
-                </a>
-
-                <ul class="level-1">
-                    <li>Helps you keep a tab of all the steps towards your journey to college.</li>
-                    <br />
-                </ul>
-
-                <ol class="ol-level-2">
-                    <!-- ---------------- screen ------------------------>
-                    <section class="image">
-                        <br />
-                        <li><b>Screens</b></li>
-
-                        <div class="row">
-                            <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/161.png">
-                                <p class="caption"><i>Screen 6.1: College checklist in the left-hand side menu bar.</i>
-                                </p>
-                            </div>
-                            <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/170.png">
-                                <p class="caption"><i>Screen 6.2: College Checklist.</i></p>
-                            </div>
-                        </div>
-                        <br />
-                    </section>
-                    <br />
-
-                    <!-- ------------------------- Procedure ----------------------- -->
+                        <li><b>Username:</b> Enter Login Username.</li>
+                        <li><b>Password:</b> Enter Login password.</li>
+                        <li><b>Remember Me:</b> Enable the option to store data for future Login.</li>
+                    </ul><br />
+                    <!-- ======================== Procedure =================================== -->
                     <li><b>Procedure:</b></li>
-
                     <ul class="level-2">
-                        <li> Select the corresponding fields that have been completed. </li>
-
-                        <ul class="level-3">
-                            <li>On<b> Selecting the first checkbox</b> all checkboxes in the list are automatically
-                                checked, indicating all items are selected. </li>
-                            <li>On<b> Unselecting the first Checkbox</b> all checkboxes in the list are automatically
-                                unchecked, indicating all items are unselected.</li>
-                        </ul>
-
-                        <li>Click on <b>Save</b> to save all the changes to the list.</li>
-                        <li>A pop-up message: <b>"College Checklist Saved"</b>, will be displayed.</li>
-                        <li>Click on <b>"OK"</b> to confirm the saving of the checklist and be redirected to the update
-                            college checklist screen.</li>
-                    </ul>
-
-                    <!-- ---------------- notes ------------------------ -->
+                        <li>To log into the system, enter your login ID in<b> Username</b> and login password in the<b>
+                                Password </b>field. </li>
+                        <li>Click <b>Sign In.</b></li>
+                    </ul><br />
+                    <!-- ============================== Notes ============================= -->
                     <li><b>Notes:</b></li>
-
                     <ul class="level-2">
-                        <li>The first checkbox is by default Unchecked.</li>
-                        <li>The college checklist provided here is a generic example and may vary depending on
-                            individual college requirements.</li>
+                        <li>You will be prompted with error message: <b>"Login Fail. Username or Password incorrect"</b>
+                            when:</li>
+                        <ul class="level-3">
+                            <li>Username is blank.</li>
+                            <li>Password is blank.</li>
+                            <li>Incorrect user ID or password entered.</li>
+                        </ul>
+                        <li>Click on Forgot Password if Required.</li>
+                        <li> Click on Register if not yet registered.</li>
+                        <li><b>Remember me</b> autofills the credentials on subsequent login.</li>
                     </ul>
-
                 </ol>
                 <br />
-                <a href="#my-checklist_top" id="my-college_top">Back To College Checklist</a>
+                <br />
+                <a href="#top" id="stu-reg_top">Back To Login</a>
                 <hr>
                 <br />
             </section>
 
-            <!-- ======================================== My Colleges ============================================ -->
+            <!--======================================== Student Registration ================================================-->
             <section class="section-submenu">
-                <a id="my-college">
-                    <h3>7. My Colleges </h3>
+
+                <a id="registration">
+                    <h3>2. Student Registration</h3>
                 </a>
 
                 <ul class="level-1">
-                    <li>In the "My Colleges" section, there are three dropdowns available:<b> UC System, CSU System, and
-                            Private Colleges.</b></li>
-                    <br />
+                    <li>Every Student must register to the College Connect Application in order to use the functions in
+                        the Application.</li>
+                    <li>There are 2 ways for Registration:</li>
+                    <ul class="level-2">
+                        <li><b>With Student ID.</b></li>
+                        <li><b>Without Student ID.</b></li>
+                    </ul>
                 </ul>
-                <section class="image">
-
-
-                    <ol class="ol-level-2">
-                        <br />
-                        <li><b>Screens</b></li>
-                        <div class="row">
-                            <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/161.png">
-                                <p class="caption"><i>Screen 7.1: My Colleges</i></p>
-                            </div>
-                            <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/169.png">
-                                <p class="caption"><i>Screen 7.2: UC, CSU and Private College Dropdowns.</i></p>
-                            </div>
-                            <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/173.png">
-                                <p class="caption"><i>Screen 7.3: Individual Dropdown list of colleges with their
-                                        respective links.</i></p>
-                            </div>
-                        </div>
-                        <br />
-                </section>
                 <br />
 
-                <li><b>Procedure</b></li>
-
-                <ul class="level-2">
-                    <li> In the "My Colleges" section, there are three dropdowns available: UC System, CSU System, and
-                        Private Colleges.
-                    </li>
-                    <li>Clicking on the "+" icon opens the list of colleges under the selected system, displaying the
-                        names of the colleges along with their corresponding links.
-                    </li>
-                    <li> Within each dropdown list, students can select any college name. Clicking on a college name
-                        link redirects the student to the respective college's web portal or site. This feature allows
-                        students to quickly access information about specific colleges and explore their offerings.
-                    </li>
-                </ul>
-
-                <li>Notes</li>
-
-                <ul class="level-2">
-                    <li>Opening one dropdown automatically closes any previously opened dropdown, ensuring only one list
-                        is visible at a time.
-                    </li>
-                </ul>
-
-                </ol>
-                <br />
-                <a href="#my-college_top" id="stu-cal_top">Back To My College</a>
-                <hr>
-                <br />
-            </section>
-
-            <!-- ======================================== My Calendar ============================================ -->
-            <section class="section-submenu">
-                <a id="stu-cal">
-                    <h3>8. My Calendar</h3>
-                </a>
-                <ul class="level-1">
-                    <li>The My Calendar tab allows you to view all your upcoming events.</li>
-                    <li>You can change the view of your calendar by clicking on the top right and selecting between
-                        <b>Month, Week, Day, Agenda</b>.
-                    </li>
-                </ul>
                 <ol class="ol-level-2">
+                    <!-- ============================== Screens ======================================== -->
                     <section class="image">
-                        <br>
+                        <br />
                         <li><b>Screens</b></li>
-                        <br>
                         <div class="row">
                             <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/161.png">
-                                <p class="caption"><i>Screen 8.1: User can acces their My Calendar tab from the side
-                                        panel.</i></p>
+                                <img src="Outer/[Mockup] iPhone Xs-6.png">
+                                <p class="caption"><i>Screen 2.1: Click On the <b>Register</b> link if not yet
+                                        registered.</i></p>
+                                <br />
                             </div>
                             <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/125.png">
-                                <p class="caption"><i>Screen 8.2: My Calendar with single task collapsed.</i></p>
-                            </div>
-                            <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/122.png">
-                                <p class="caption"><i>Screen 8.3: My Calendar with single task expanded.</i></p>
-                            </div>
-                            <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/126.png">
-                                <p class="caption"><i>Screen 8.4: My Calendar with multiple tasks collapsed.</i></p>
-                            </div>
-                            <div class="column">
-                                <img src="Student Role College Connect Siembra Mobile Screenshots/124.png">
-                                <p class="caption"><i>Screen 8.5: My Calendar with multiple tasks expanded.</i></p>
+                                <img src="Outer/[Mockup] iPhone Xs-2.png">
+                                <p class="caption"><i>Screen 2.2: Click on the <b>Student Connect</b> for Student
+                                        Registration.</i></p>
                             </div>
                         </div>
+                        <br />
                     </section>
+                    <br />
+                    <!-- ================================== Procedure ================================= -->
+                    <li><b>Procedure:</b></li>
+                    <ul class="level-2">
+                        <li>Select the<b> Student connect</b> option for student registration.</li>
+                    </ul>
+                    <!-- =============================== Notes ======================================== -->
+                    <li><b>Notes:</b></li>
+                    <ul class="level-2">
+                        <li>You can go back to the user inquiry page at any time by clicking the<b> “Cancel”</b> button
+                            or<b> “&lt;” </b>icon.</li>
+                    </ul>
                 </ol>
             </section>
+
             <br />
-            <a href="#stu-cal_top">Back To My Calendar</a>
+            <!-- <a href="#registration_top" style="padding-left: 30px;">Back To Registration</a> -->
             <hr>
             <br />
+            <section class="section-sub-submenu">
+                <!-- -------------------------------------- Registration With ID -------------------------------------- -->
+                <section class="section-sub-submenu">
+                    <a id="registration-with-id">
+                        <h3>2.1 Registration with Student ID.</h3>
+                    </a>
+                    <ul class="level-1">
+                        <li><b>With Student ID</b> is a flow specifically for students who have Done SFTP registration.
+                        </li>
+                        <li>Should know the <b>Student ID</b> and <b>School Name</b> Fields.</li>
+                    </ul>
+                    <br />
+                    <!-- ======================================= Screens =================================== -->
+                    <ol class="ol-level-2">
+                        <section class="image">
+                            <br />
+                            <li><b>Screens</b></li>
+                            <div class="row">
+                                <div class="column">
+                                    <img src="Outer/[Mockup] iPhone Xs-3.png">
+                                    <p class="caption"><i>Screen 2.1.1: Select <b>With Student ID</b> to register with a
+                                            student ID.</i></p>
+                                </div>
+                                <div class="column">
+                                    <img src="Outer/[Mockup] iPhone Xs-8.png">
+                                    <p class="caption"><i>Screen 2.1.2: Fill up the required details and click on
+                                            <b>Next</b>.</i></p>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="column">
+                                    <img src="Outer/[Mockup] iPhone Xs-12.png">
+                                    <p class="caption"><i>Screen 2.1.3: Fill the required details correctly.</i></p>
+                                </div>
+                                
+                                <div class="column">
+                                    <img src="Outer/[Mockup] iPhone Xs-13.png">
+                                    <p class="caption"><i>Screen 2.1.4: Fill the required details correctly and click on
+                                            <b>create account</b>.</i></p>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="column">
+                                    <img src="Outer/[Mockup] iPhone Xs-6.png">
+                                    <p class="caption"><i>Screen 2.1.6: You will be redirected to the Sign In Page.
+                                            Enter the credentials and Sign In.</i></p>
+                                </div>
+                            </div>
+                            <br />
+                        </section>
+                        <br />
+                        <!-- ===================================== Fields ============================================= -->
+                        <li><b>Fields:</b></li>
+                        <ul class="level-2">
+                            <li><b>School Name: </b>Students enter “School Name” Then open the list of school names
+                                and select the school. </li>
+                            <li><b>First Name: </b> Students enter First Name. </li>
+                            <li><b>Last Name: </b> Students enter Last Name.</li>
+                            <li><b>Student ID: </b>Students enter Student ID.</li>
 
+                            <li><b>Gender: </b>Select the gender.</li>
+
+                            <li><b>Birthday: </b>Select the birthday.</li>
+             
+                            <li><b>Current Grade: </b>Students select their preferred grade from the Grade listing,
+                                instead of it being displayed by default.</li>
+                            <li><b>Country: </b>Enter country name and which enables the state input field. </li>
+                            <li><b>State: </b>Enabled after Country is entered. If the country is United States, a
+                                dropdown list of states is shown. If a country other than United States, then
+                                enter the state manually.</li>
+                            <li><b>Password: </b>Enter the password.</li>
+                            <li><b>Confirm Password: </b>Retype the password to confirm it.</li>
+                            <li><b>Mobile Number: </b>Add your Mobile Number.</li>
+                            <li><b>Parent Email Address: </b>Add your parents Email Address. </li>
+                            <li><b>Terms & Conditions checkboxes: </b>Check the required checkboxes.</li>
+                        </ul>
+                        <br />
+                        <!-- ========================================= Procedure ========================================== -->
+                        <li><b>Procedure:</b></li>
+                        <ul class="level-2">
+                            <li>Click on the <b>Register </b>link at the bottom of the Sign In Page if not yet
+                                registered.</li>
+                            <li>You will be redirected to another screen with <b>2 options: Student Connect</b> and<b>
+                                    Parent Connect</b>.</li>
+                            <li>select the <b>Student Connect</b> option and you will be redirected to another
+                                screen with <b>2 Options: With Student ID </b> and <b> Without Student ID</b>.</li>
+                            <li>Select the <b>With Student ID</b> option.</li>
+                            <li>You will be redirected to another screen with various input fields.</li>
+                            <li>Fill all the required details correctly and click <b>Next</b>.</li>
+                            <li>Fill the remaining required data.</li>
+                            <ul class="level-3">
+                                <li><b>Make Sure to check the last 2 checkboxes.</b></li>
+                            </ul>
+                            <li> Click on <b>Create Account</b></li>
+                            <li> A pop-up message:<b> "Success! Your Account has been created. Please Check your email
+                                    to verify your account"</b> will be displayed. Click on<b> OK.</b></li>
+                            <li>You will be redirected to the <b>Sign In Page</b> again. Enter your credentials and Sign
+                                In.</li>
+                        </ul><br />
+                        <!-- ====================================== Notes ================================= -->
+                        <li><b>Notes:</b></li>
+                        <ul class="level-2">
+                            <li>Make sure to fill in all the details correctly.</li>
+                            <li>Your password must be at least <b>8 characters</b> long and can include a combination of
+                                <b>letters (both uppercase and lowercase), numbers, and special characters (such as !,
+                                    @, #, $, etc.)</b>.
+                            </li>
+                            <li>Make sure the last 2 checkboxes have been checked in the registration form.</li>
+                            <li>Make sure to verify your account from the link provided in your <b> Email</b>.</li>
+                            <li>In the <b>Country field</b>, if your country is <b>The Unites States</b>, then a
+                                dropdown list of <b>States</b> will open. If the country is <b> Other than The United
+                                    States</b>, then you need to <b>manually</b> enter the state.</li>
+                            <li>You can go back to the user inquiry page at any time by clicking the <b>“Cancel”</b>
+                                button or <b>“&lt;” </b> icon.</li>
+                        </ul>
+                    </ol>
+
+                </section>
+                <br />
+                <!-- <a href="#registration_top">Back To Registration</a> -->
+                <hr>
+                <br />
+                <!-- =====================================  Registration Without ID ============================ -->
+                <section class="section-sub-submenu">
+                    <a id="registration-without-id">
+                        <h3><b>2.2 Registration Without Student ID.</b></h3>
+                    </a>
+                    <ul class="level-1">
+                        <li><b>Without Student ID</b> registration is for students who have not done SFTP registration.
+                        </li>
+                        <li>There are 2 ways for registration without a student ID:</li>
+                        <ul class="level-2">
+                            <li><b>With Personal Email ID.</b></li>
+                            <li><b>With Google Email ID.</b></li>
+                            <br />
+                            <section class="image">
+                                <br />
+                                <img src="Outer/[Mockup] iPhone Xs-3.png">
+                                <p class="caption"><i>Screen 2.2.1: Select <b> Without Student ID</b>.</i></p>
+                                <br />
+                            </section>
+                        </ul>
+                    </ul>
+                    <br />
+
+                    <!-- --------------------------- Personal ID --------------------------------------------->
+                    <section class="section-sub-sub-submenu">
+                        <a id="registration-with-personal-id">
+                            <h3>
+                                <li>2.2.1 Registration With Personal Email ID.</li>
+                            </h3>
+                        </a>
+                        <ul class="level-3">
+                            <li> To Register with Your personal email ID:</li>
+                        </ul>
+                        <br />
+                        <!-- ------------------------------ Screens ------------------------------------ -->
+                        <ol class="ol-level-2">
+                            <section class="image">
+                                <br />
+                                <li><b>Screens</b></li>
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="Outer/[Mockup] iPhone Xs-4.png">
+                                        <p class="caption"><i>Screen 2.2.1.1: Enter your Personal Email ID.</i></p>
+                                    </div>
+                                    <div class="column">
+                                        <img src="Outer/[Mockup] iPhone Xs-7.png">
+                                        <p class="caption"><i>Screen 2.2.1.2: Enter the OTP received in email.</i></p>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="Outer/[Mockup] iPhone Xs-9.png">
+                                        <p class="caption"><i>Screen 2.2.1.3: Fill the required details.</i></p>
+                                    </div>
+                                    <div class="column">
+                                        <img src="Outer/[Mockup] iPhone Xs-10.png">
+                                        <p class="caption"><i>Screen 2.2.1.4: Fill the required details and click on
+                                                register.</i></p>
+                                    </div>
+                                </div>
+                                <br />
+                            </section>
+                            <br />
+                            <!-- ----------------------------- Fields ------------------------------------ -->
+                            <li><b>Fields:</b></li>
+                            <ul class="level-2">
+                                <li><b>Email ID:</b> Enter your personal email ID.</li>
+                                <li><b>OTP:</b> Enter the 6-digit OTP received in your email ID.</li>
+                                <li><b>First Name:</b> Enter your First Name.</li>
+                                <li><b>Last Name:</b> Enter your Last Name.</li>
+                                <li><b>Country: </b>Enter country name.</li>
+                                <li><b>State: </b>Entering the country enables the State field. If the country is The
+                                    United States, a dropdown list of states is shown. If it is other than The Unites
+                                    States, then enter the state manually.</li>
+                                <li><b>Password: </b>Enter your password.</li>
+                                <li><b>Confirm Password: </b>Re-Enter your password to verify.</li>
+                            </ul>
+                            <br />
+                            <!--  -------------------- Procedure ---------------------------------------- -->
+                            <li><b>Procedure:</b></li>
+                            <ul class="level-2">
+                                <li>Click on the <b>Register </b>link at the bottom of the Sign In Page if not yet
+                                    registered.</li>
+                                <li>You will be redirected to another screen with <b>2 options: Student Connect</b>
+                                    and<b> Parent Connect.</b></li>
+                                <li>select the <b>Student Connect</b> option and you will again be redirected to another
+                                    screen with <b>2 Options: With Student ID </b> and <b> Without Student ID</b>.</li>
+                                <li>Select the <b>Without Student ID</b> option.</li>
+                                <li>You will be redirected to another screen with Email ID as input Field.</li>
+                                <li>Enter Your email ID and click on <b>Continue.</b> You will be redirected to another
+                                    screen.</li>
+                                <li>You will receive an <b>OTP</b> in the <b>Personal Email ID</b> you entered.</li>
+                                <li>Enter the OTP received and click on <b>Verify</b>. Click<b> Resend OTP</b> if
+                                    required.</li>
+                                <li>After verification, you will be redirected to a new screen with various input
+                                    fields.</li>
+                                <li>After filling the required details, click <b>Register</b>.</li>
+                                <li>A pop-up message:<b> "Success! your account has been created" </b>is displayed.
+                                    Click
+                                    on <b>"OK"</b>.</li>
+                                <li>You will be redirected to the Sign In Page. Enter Your credentials and Sign In.</li>
+                            </ul><br />
+                            <!-- ---------------------------------- Notes ------------------------------------- -->
+                            <li><b>Notes</b></li>
+                            <ul class="level-2">
+                                <li>Make sure to fill all the details correctly.</li>
+                                <li>Your password must be at least <b>8 characters</b> long and can include a
+                                    combination of <b>letters (both uppercase and lowercase), numbers, and special
+                                        characters (such as !, @, #, $, etc.)</b>.</li>
+                                <li>In the <b>Country field</b>, if your country is <b>United States</b>, then a
+                                    dropdown list of <b>States</b> will open. If the country is<b> Other than The United
+                                        States</b>, then you need to <b>manually</b> enter the state.</li>
+                                <li>You can go back to the user inquiry page at any time by clicking the <b>“Cancel”</b>
+                                    button or <b>“<”< /b> icon.</li>
+                            </ul>
+                        </ol>
+                        <br />
+                    </section>
+                    <!-- ------------------------------------- Google ID -------------------------------------------- -->
+                    <section class="section-sub-sub-submenu">
+                        <a id="registration-with-google-id">
+                            <h3>
+                                <li>2.2.2 Registration With Google Email ID.</li>
+                            </h3>
+                        </a>
+                        <ul class="level-3">
+                            <li> To Register with Your Google email ID:</li>
+                        </ul>
+                        <br />
+                        <!-- ------------------------------ Screens ------------------------------------ -->
+                        <ol class="ol-level-2">
+                            <section class="image">
+                                <br />
+                                <li><b>Screens</b></li>
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="Outer/[Mockup] iPhone Xs-4.png">
+                                        <p class="caption"><i>Screen 2.2.2.1: Click on the <b> Continue with
+                                                    Google</b>.</i></p>
+                                    </div>
+                                </div>
+                                <br />
+                            </section>
+                            <br />
+                            <!-- ----------------------------- Fields ------------------------------------ -->
+                            <li><b>Fields:</b></li>
+                            <ul class="level-2">
+                                <li><b>Continue with Google:</b> Click and select your Google Email ID.</li>
+                            </ul>
+                            <br />
+                            <!--  -------------------- Procedure ---------------------------------------- -->
+                            <li><b>Procedure:</b></li>
+                            <ul class="level-2">
+                                <li>Click on the <b>Register </b>link at the bottom of the Sign In Page if not yet
+                                    registered.</li>
+                                <li>You will be redirected to another screen with <b>2 options: Student Connect</b>
+                                    and<b> Parent Connect</b>.</li>
+                                <li>select the <b>Student Connect</b> option and you will again be redirected to another
+                                    screen with <b>2 Options: With Student ID </b>and<b> Without Student ID</b>.</li>
+                                <li>Select the <b>Without Student ID</b> option.</li>
+                                <li>You will be redirected to another screen with Email ID as input Field and a
+                                    <b>Continue with Google</b> button below the Email field.
+                                </li>
+                                <li>Click on the <b> Continue With Google</b> button.</li>
+                                <li>A list of Google emails ID's on your device will show up.</li>
+                                <li>Select the required email ID.</li>
+                                <li>You will directly be Registered and Signed In with google ID and will be redirected
+                                    to the dashboard.</li>
+                            </ul><br />
+                            <!-- ---------------------------------- Notes ------------------------------------- -->
+                            <li><b>Notes:</b></li>
+                            <ul class="level-2">
+                                <li>Make sure to fill all the details correctly.</li>
+                                <li>Make sure your password comprises of atleast <b>8 AlphaNumeric Characters.</b></li>
+                                <li>In the <b>Country field</b>, if your country is <b>United States</b>, then a
+                                    dropdown list of <b>states</b> will open. If the country is <b> Other than The
+                                        United States</b>, then you need to <b>manually</b> enter the state.</li>
+                                <li>You can go back to the user inquiry page at any time by clicking the <b>“Cancel”</b>
+                                    button or <b>“&lt;” </b> icon.</li>
+                            </ul>
+                        </ol>
+
+                        <br />
+                    </section>
+                </section>
+                <br />
+                <a href="#stu-reg_top" id="par-reg_top">Back To Student Registration</a>
+                <hr>
+                <br />
+            </section>
+
+            <!--======================================== Parent Registration ================================================-->
+            <section class="section-submenu">
+                <a id="parent-registration">
+                    <h3>3. Parent Registration</h3>
+                </a>
+                <br />
+                <ul class="level-1">
+                    <li>Every Parent/Gaurdian must register to the College Connect Application in order to use the
+                        functions in the Application.</li>
+                </ul>
+                <br />
+
+                <ol class="ol-level-2">
+                    <!-- ============================== Screens ======================================== -->
+
+                    <section class="image">
+                        <br />
+                        <li><b>Screens</b></li>
+                        <div class="row">
+                            <div class="column">
+                                <img src="Outer/[Mockup] iPhone Xs-14.png">
+                                <br />
+                                <p class="caption"><i>Screen 3.1: Click On the <b>Register</b> in Sign In page. you will
+                                        be redirected to a registration page. Fill the required details.</i></p>
+                                <br />
+                            </div>
+                            <div class="column">
+                                <img src="Outer/[Mockup] iPhone Xs-15.png">
+                                <br />
+                                <p class="caption"><i>Screen 3.2: Fill the required details and click on <b>Save Profile
+                                        </b>.</i></p>
+                            </div>
+                        </div>
+                    </section>
+                    <br />
+                    <!-- ======================================= Fields ========================================== -->
+                    <li><b>Fields:</b></li>
+                    <ul class="level-2">
+                        <li><b>School District: </b>Enter your child's school district.</li>
+                        <li><b>School Name: </b>Enter your child's school name.</li>
+                        <li><b>Student ID: </b>Enter your child's student ID.</li>
+                        <li><b>Parent/Gaurdian First Name: </b>Enter your first name.</li>
+                        <li><b>Parent/Gaurdian Last Name: </b>Enter your last name.</li>
+                        <li><b>Parent/Gaurdian Email Address: </b>Enter your email address.</li>
+                        <li><b>Parent/Gaurdian Mobile Number: </b>Enter your mobile number.</li>
+                        <li><b>Language Preference: </b>Select your preferred language [EN/ES].</li>
+                        <li><b>Password: </b>Enter your desired password.</li>
+                        <li><b>Confirm Password: </b>Re-enter your password.</li>
+                    </ul>
+                    <br />
+                    <!-- ================================== Procedure ================================= -->
+                    <li><b>Procedure:</b></li>
+                    <ul class="level-2">
+                        <li>Click on the <b>Register</b> link on the Sign In Page. You will be redirected to the
+                            register page.</li>
+                        <li>Fill all the required details.</li>
+                        <li>Click on <b>Save Profile</b>. You will be redirected to the Sign In page.</li>
+                        <li>Enter your credentials to Sign In.</li>
+                    </ul>
+                    <br />
+                    <!-- =============================== Notes ======================================== -->
+                    <li><b>Notes:</b></li>
+                    <ul class="level-2">
+                        <li>Make sure you fill all the fields correctly.</li>
+                        <li>You can go back to the user inquiry page at any time by clicking the<b> “Cancel”</b> button
+                            or<b> “&lt;” </b>icon.</li>
+                    </ul>
+                </ol>
+
+                <br />
+                <a href="#par-reg_top" id="forgot-pw_top">Back To Parent Registration</a>
+                <hr>
+                <br />
+            </section>
+
+            <!-- ======================================== Forgot Password ================================================ -->
+            <section class="section-submenu">
+                <a id="forgot-password">
+                    <h3><b>4. Forgot Password</b></h3>
+                </a>
+                <br />
+                <ul class="level-1">
+                    <li>If you have forgotten your password, you may reset it by clicking <b>"Forgot password"</b> below
+                        the input fields in Sign In page.</li>
+                </ul>
+                <br />
+                <ol class="ol-level-2">
+                    <!-- ======================= Screens ====================================== -->
+                    <section class="image">
+                        <br />
+                        <li><b>Screens</b></li>
+                        <div class="row">
+                            <div class="column">
+                                <img src="Outer/[Mockup] iPhone Xs-5.png">
+                                <p class="caption"><i>Screen 4.1: Enter your email to receive the password changing
+                                        link.</i></p>
+                            </div>
+                        </div>
+                        <br />
+                        <img class="web-img-land" src="Images/ForgotPasswordScreen4.jpg">
+                        <p class="caption"><i>Screen 4.2: Password Reset Link shared in E-mail.</i></p>
+                        <br />
+                        <img class="web-img-land" src="Images/ForgotPasswordScreen5.jpg">
+                        <p class="caption"><i>Screen 4.3: Password update Link. Fill in the required details </i>
+                        </p>
+                        <br />
+                        <img class="web-img-land" src="Images/ForgotPasswordScreen6.jpg">
+                        <p class="caption"><i>Screen 4.4: Successful Password update</i></p>
+                        <br />
+
+                    </section>
+                    <br />
+                    <!-- ==================================== Fields ================================ -->
+                    <li><b>Fields:</b></li>
+                    <ul class="level-2">
+                        <li><b>Email:</b> Registered account E-mail, which should be the same as the E-mail of your
+                            login account, should be entered in the Reset Password Page.</li>
+                        <li><b>Password:</b> Enter your new password.</li>
+                        <li><b>Verify Password:</b> Retype new password, which should be the same as above.</li>
+                    </ul><br />
+                    <!-- ================================ Procedure ======================================== -->
+                    <li><b>Procedure:</b></li>
+                    <ul class="level-2">
+                        <li>Access the Forgot Password page by clicking <b>“Forgot my password”</b>.</li>
+                        <li>Enter a valid E-mail address in the E-mail field and click <b>“Reset Password”</b> to
+                            proceed to reset your password. An E-mail notification will be sent to you.</li>
+                        <li>Check your registered E-mail and confirm your password reset action by clicking on reset
+                            password <b> “link”</b>. It will direct you to the new password page.</li>
+                        <li>Enter your desirable new password in Password field and the same password in the Verify
+                            Password field, and then click <b>“Reset Password”</b> to continue.</li>
+                        <li>Upon completion, a successful password reset confirmation will be displayed.</li>
+                    </ul><br />
+                    <!-- ====================================== Notes ============================================== -->
+                    <li><b>Notes:</b></li>
+                    <ul class="level-2">
+                        <li>After the system has accepted your request, you will receive an email to proceed with
+                            your password reset. You must log in to your email system and change the password
+                            immediately</li>
+                        <li>You will be prompted with error when:</li>
+                        <ul class="level-3">
+                            <li>The <b>email</b> address field is blank.</li>
+                            <li>The entered email address is not the valid registered email address for your
+                                account.</li>
+                            <li>Your user account has been locked or deactivated. In such case, you must contact
+                                PCCW Global administrator or Customer administrator to unlock or re-activate your
+                                account.</li>
+                            <li>The <b>Confirm Password</b> field does not match the New Password entered.</li>
+                            <li>The new password matches the old password.</li>
+                        </ul>
+                    </ul>
+                </ol>
+                <br />
+                <a id="link" href="#forgot-pw_top">Back To Forgot Password</a>
+                <hr />
+                <br />
+            </section>
+
+            </section>
         </section>
-
-
     </main>
 
-    <script src="main.js"></script>
 </body>
 
 </html>
